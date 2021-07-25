@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+  <item
+      android:id="@+id/upComingFragment"
+      android:icon="@drawable/ic_baseline_local_movies_24"
+      android:title="UpComing" />
+
+  <item
+      android:id="@+id/popularFragment"
+      android:icon="@drawable/ic_baseline_local_movies_24"
+      android:title="Popular" />
+
+
+</menu>

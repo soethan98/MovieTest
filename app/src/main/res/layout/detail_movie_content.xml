@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:behavior_overlapTop="70dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/fragment_movie_detail">
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@drawable/poster_background">
+
+    <ImageView
+        android:id="@+id/poster_image"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="10dp" />
+
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_toEndOf="@id/poster_image"
+        android:fontFamily="serif"
+        android:maxLines="4"
+        android:text="Avengers"
+        android:textAppearance="?textAppearanceBody1"
+        android:textStyle="bold"/>
+    <LinearLayout
+        android:id="@+id/rating_lang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitle"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@id/poster_image"
+        android:orientation="horizontal">
+
+      <ImageView
+          android:id="@+id/star"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@drawable/ic_star" />
+
+
+      <TextView
+          android:layout_marginLeft="4dp"
+          android:id="@+id/movie_rat"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textStyle="bold"
+          android:textSize="15sp" />
+
+      <View
+          android:id="@+id/search_line"
+          android:layout_width="3dp"
+          android:layout_height="12dp"
+          android:layout_marginLeft="4dp"
+          android:layout_gravity="center"
+          android:background="@android:color/darker_gray"
+          android:paddingTop="4dp" />
+
+      <TextView
+          android:id="@+id/movie_lang"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:paddingLeft="4dp"
+          android:text="hello"
+          android:textAllCaps="true"
+          android:textStyle="bold"
+          android:textSize="15sp" />
+    </LinearLayout>
+
+
+
+
+    <TextView
+        android:id="@+id/movie_release"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rating_lang"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/poster_image"
+        android:fontFamily="sans-serif"
+        android:text="@string/app_name"
+        android:textAppearance="?textAppearanceSubtitle1" />
+
+
+    <TextView
+        android:id="@+id/overview_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/poster_image"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:text="Overview"
+        android:textAppearance="?textAppearanceSubtitle2" />
+
+    <TextView
+        android:id="@+id/movie_overview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/overview_label"
+        android:layout_margin="16dp"
+        android:lineSpacingMultiplier="1.2"
+        android:textAppearance="?textAppearanceCaption" />
+
+
+
+  </RelativeLayout>
+
+
+</androidx.core.widget.NestedScrollView>

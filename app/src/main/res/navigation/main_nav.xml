@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/upComingFragment">
+  <fragment
+      android:id="@+id/upComingFragment"
+      android:name="com.soethan.movietest.ui.page.upcominglist.UpComingFragment"
+      android:label="Upcoming"
+      tools:layout="@layout/fragment_up_coming" >
+    <action
+        android:id="@+id/toMovieDetail"
+        app:destination="@id/movieDetailFragment" />
+  </fragment>
+
+  <fragment
+      android:id="@+id/popularFragment"
+      android:name="com.soethan.movietest.ui.page.popularlist.PopularFragment"
+      android:label="Popular" >
+    <action
+        android:id="@+id/toMovieDetail"
+        app:destination="@id/movieDetailFragment" />
+  </fragment>
+  <fragment
+      android:id="@+id/movieDetailFragment"
+      android:name="com.soethan.movietest.ui.page.moviedetail.MovieDetailFragment"
+      android:label="Detail"
+      tools:layout="@layout/fragment_movie_detail" >
+    <argument
+        android:name="id"
+        app:argType="integer" />
+
+  </fragment>
+  <fragment
+      android:id="@+id/favoriteFragment"
+      android:name="com.soethan.movietest.ui.page.favorite.FavoriteFragment"
+      android:label="Favorite"
+      tools:layout="@layout/fragment_favorite" >
+    <action
+        android:id="@+id/toMovieDetail"
+        app:destination="@id/movieDetailFragment" />
+  </fragment>
+</navigation>

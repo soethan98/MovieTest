@@ -1,0 +1,4 @@
+rootProject.name = "MovieTest"
+include ':app'
+include ':domain'
+include ':data'
